@@ -16,6 +16,8 @@ const baseColors = [
 
 ]
 
+
+
 const shadeMapping = {
   '50': '900',
   '100': '800',
@@ -28,17 +30,29 @@ const shadeMapping = {
   '800': '100',
   '900': '50',
 }
+/*  Showing how swap shades when changing between light and dark.
+    Such as: 50 in light theme is 900 in dark theme.
+    ** shade = light || dark */
+
+
 
 const generateThemeObject = (colors: any, mapping: any, invert = false) => {
   const theme: any = {};
+  // Storing all the colors  mappings for the theme
+
   baseColors.forEach((color) => {
     theme[color] = {};
-    Object.entries(mapping).forEach(([key, value]: any) => {
+    // Creating theme object for each items in baseColors
+    const entries = Object.entries(mapping);
+    // entries = [ ['50', '900'], ['100', '800'], ...]
+    entries.forEach(([key, value]: any) => {
+      // key = 50, value = 900
       const shadeKey = invert ? value : key;
+      // If invert is true, shadeKey = value, else shadeKey = key
       theme[color][key] = colors[color][shadeKey];
     });
   });
-  return theme
+  return theme;
 }
 
 const lightTheme = generateThemeObject(colors, shadeMapping);
