@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import DashBoardWrapper from "./dashboardWrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* We will need the navbar and the menu with all the pages so best to keep it in layout file */}
+        <DashBoardWrapper>{children}</DashBoardWrapper>
       </body>
     </html>
   );
