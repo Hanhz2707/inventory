@@ -2,6 +2,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import globalReducer from "../../redux/state";
+import {api} from "../../redux/state/api";
 
 const createNoopStorage = () => {
     return {
