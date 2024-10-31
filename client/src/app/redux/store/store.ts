@@ -30,24 +30,18 @@ const createNoopStorage = () => {
 };
 
 const storage = typeof window === "undefined" ? createNoopStorage() : createWebStorage("local");
-
+// Setting up persistence for Redux store
 const persistConfig = {
   key: "root",
   storage,
   whitelist: ["global"],
 }
 
-
-// const persistConfig = { 
-// key: "root",
-// storage,
-// whitelist: ["global"],
-// };
-
 const rootReducer = combineReducers({
-global: globalReducer,
-[api.reducerPath]: api.reducer,
+  global: globalReducer,
+  [api.reducerPath]: api.reducer,
 });
+
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
