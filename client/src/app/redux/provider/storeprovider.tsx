@@ -6,6 +6,11 @@ import { makeStore } from "../store/store";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { persistStore } from "redux-persist";
 
+/*
+ * This component will create the store and share it
+ * using React-Redux Provider component.
+ */
+
 export default function StoreProvider({
   children,
 }: {
