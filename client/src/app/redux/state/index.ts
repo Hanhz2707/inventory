@@ -15,10 +15,12 @@ export const globalSlice = createSlice({
     name: "global",
     initialState,
     reducers: {
+
         // Creating 2 functions to toggle the sidebar and dark mode
         toggleSideBar: (state, action: PayloadAction<boolean>) => {
             state.isSideBarCollapsed = action.payload;
         },
+        
         toggleDarkMode: (state, action: PayloadAction<boolean>) => {
             state.isDarkMode = action.payload;
         },

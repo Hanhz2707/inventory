@@ -29,8 +29,10 @@ const createNoopStorage = () => {
   };
 };
 
+// If we are in the server, we use a noop storage, else we use local storage
 const storage = typeof window === "undefined" ? createNoopStorage() : createWebStorage("local");
-// Setting up persistence for Redux store
+
+// Setting up persistence for Redux store, use storage to persist the data
 const persistConfig = {
   key: "root",
   storage,
