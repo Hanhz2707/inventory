@@ -53,6 +53,7 @@ const Navbar = () => {
               3
             </span>
           </div>
+
           {/* Creating a verticle line */}
           <hr className="w-0 h-7 border border-solid border-l border-gray-300 mx-3" />
           <div className="flex items-center gap-3 cursor-pointer">
