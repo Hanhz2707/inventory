@@ -2,9 +2,18 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux/types/types";
 import { stat } from "fs";
-import { Menu } from "lucide-react";
+import {
+  Archive,
+  CircleDollarSign,
+  Clipboard,
+  Layout,
+  Menu,
+  SlidersHorizontal,
+  User,
+} from "lucide-react";
 import React from "react";
 import { setIsSidebarCollapsed } from "../../redux/state/index";
+import SidebarLink from "./sidebarlink";
 
 const SideBar = () => {
   const dispatch = useAppDispatch();
@@ -46,7 +55,44 @@ const SideBar = () => {
       </div>
 
       {/* Links */}
-      <div className="flex-grow-8 mt-8"></div>
+      <div className="flex-grow-8 mt-8">
+        <SidebarLink
+          href="/dashboard"
+          icon={Layout}
+          label="Dashboard"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/inventory"
+          icon={Archive}
+          label="Inventory"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/products"
+          icon={Clipboard}
+          label="Product"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/users"
+          icon={User}
+          label="Users"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/settings"
+          icon={SlidersHorizontal}
+          label="Settings"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/expenses"
+          icon={CircleDollarSign}
+          label="Expenses"
+          isCollapsed={isSidebarCollapsed}
+        />
+      </div>
 
       {/* Footers */}
       <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10"`}>
