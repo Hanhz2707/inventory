@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Users {
   userId String @id
   name   String
   email  String
@@ -23,7 +17,7 @@ model Products {
   productId     String      @id
   name          String
   price         Float
-  rating        Float
+  rating        Float?
   stockQuantity Int
   Sales         Sales[]
   Purchases     Purchases[]
@@ -65,14 +59,14 @@ model SalesSummary {
 
 model PurchaseSummary {
   purchaseSummaryId String   @id
-  totalValue        Float
+  totalPurchased    Float
   changePercentage  Float?
   date              DateTime
 }
 
 model ExpenseSummary {
   expenseSummaryId  String              @id
-  totalValue        Float
+  totalExpenses     Float
   date              DateTime
   ExpenseByCategory ExpenseByCategory[]
 }
