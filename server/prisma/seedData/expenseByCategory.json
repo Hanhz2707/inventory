@@ -1,0 +1,100 @@
+[
+  {
+    "expenseByCategoryId": "0e980d1b-ae93-4a5a-b235-4dfea5f42860",
+    "expenseSummaryId": "5229a14b-443b-4551-9d01-4bc0dc820d05",
+    "date": "2024-11-23T11:54:21Z",
+    "category": "Office",
+    "amount": 48
+  },
+  {
+    "expenseByCategoryId": "076a4956-60c2-4b73-b275-530359a91cba",
+    "expenseSummaryId": "c17ff164-1ab4-41e7-91a8-8aab790dcd88",
+    "date": "2024-08-13T09:49:33Z",
+    "category": "Salaries",
+    "amount": 66
+  },
+  {
+    "expenseByCategoryId": "27d49b13-1a3a-4fc7-924c-07147e4d08bd",
+    "expenseSummaryId": "45ecf33b-6c3b-4e55-84ec-fa30b88aa03f",
+    "date": "2024-07-24T09:26:56Z",
+    "category": "Salaries",
+    "amount": 63
+  },
+  {
+    "expenseByCategoryId": "037fce5f-2c74-4f7a-a863-8cdd4db8a56b",
+    "expenseSummaryId": "e495b850-cf2b-4b76-93c2-d4241c859cd0",
+    "date": "2024-05-24T05:24:15Z",
+    "category": "Salaries",
+    "amount": 77
+  },
+  {
+    "expenseByCategoryId": "abdb6c33-81ff-45dd-a653-ceae0783729d",
+    "expenseSummaryId": "376f8d90-8b66-4cff-bd4e-2fcd14a42845",
+    "date": "2024-05-07T12:33:09Z",
+    "category": "Office",
+    "amount": 67
+  },
+  {
+    "expenseByCategoryId": "246326ac-b8b2-44ee-9f14-f54086aa6a00",
+    "expenseSummaryId": "744bb795-0f98-45cd-99ae-45dddb99c3e4",
+    "date": "2024-01-08T22:08:30Z",
+    "category": "Salaries",
+    "amount": 12
+  },
+  {
+    "expenseByCategoryId": "760beed5-a14b-4e4b-9951-3ebe6f5842a1",
+    "expenseSummaryId": "4a6a10e5-4f44-4aef-a1bd-c57075f3c44f",
+    "date": "2024-06-11T08:03:25Z",
+    "category": "Office",
+    "amount": 57
+  },
+  {
+    "expenseByCategoryId": "6c653ab9-2b4b-49be-b891-944f5ff98b85",
+    "expenseSummaryId": "d62a1123-18b3-4784-bbdd-70a29f773f99",
+    "date": "2024-07-10T00:15:57Z",
+    "category": "Office",
+    "amount": 34
+  },
+  {
+    "expenseByCategoryId": "0636f954-6ef8-40b4-819f-fbfe4511be56",
+    "expenseSummaryId": "ace2b05e-31de-48bd-a179-e59d16757456",
+    "date": "2024-12-16T19:29:15Z",
+    "category": "Salaries",
+    "amount": 43
+  },
+  {
+    "expenseByCategoryId": "86f616b9-3d68-4a04-b8e8-966a11ce1a78",
+    "expenseSummaryId": "f24f6dd9-dd18-42f9-a76a-95d8198b7636",
+    "date": "2024-07-04T04:49:15Z",
+    "category": "Salaries",
+    "amount": 62
+  },
+  {
+    "expenseByCategoryId": "0381f4e7-08dc-4e10-8d8d-be02a3d1c16b",
+    "expenseSummaryId": "2a2a88f0-0148-4667-8bab-7d129586bdf7",
+    "date": "2024-10-18T18:41:07Z",
+    "category": "Professional",
+    "amount": 28
+  },
+  {
+    "expenseByCategoryId": "55628026-8104-4d95-91f8-8062df421036",
+    "expenseSummaryId": "560c166c-7093-4583-a007-5af2a88f1dab",
+    "date": "2024-01-01T03:49:45Z",
+    "category": "Office",
+    "amount": 65
+  },
+  {
+    "expenseByCategoryId": "44e1e4bc-462a-4b41-a1d2-a9997fa38ff8",
+    "expenseSummaryId": "6faadd8d-5cdd-4b35-a3e8-cb0ada67de3a",
+    "date": "2024-12-23T19:25:39Z",
+    "category": "Salaries",
+    "amount": 54
+  },
+  {
+    "expenseByCategoryId": "ab27a324-088c-4bdc-8ce4-c67a6fbff088",
+    "expenseSummaryId": "be4755fd-0f7c-4292-a0ad-539ad1371f6e",
+    "date": "2024-03-15T12:50:41Z",
+    "category": "Salaries",
+    "amount": 97
+  }
+]
