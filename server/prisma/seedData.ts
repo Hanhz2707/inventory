@@ -1,11 +1,11 @@
 import { PrismaClient } from "@prisma/client";
 import fs from "fs";
 import path from "path";
+
 const prisma = new PrismaClient();
 
-
 // Delete all data first
-async function deleteAllData(orderedFileNames: string[]) {
+const deleteAllData = async (orderedFileNames: string[]) => {
   const modelNames = orderedFileNames.map((fileName) => {
     const modelName = path.basename(fileName, path.extname(fileName));
     return modelName.charAt(0).toUpperCase() + modelName.slice(1);
@@ -24,7 +24,7 @@ async function deleteAllData(orderedFileNames: string[]) {
   }
 }
 
-async function main() {
+const seedData = async () => {
   const dataDirectory = path.join(__dirname, "seedData");
 
   const orderedFileNames = [
@@ -57,12 +57,11 @@ async function main() {
         data,
       });
     }
-
     console.log(`Seeded ${modelName} with data from ${fileName}`);
   }
 }
 
-main()
+seedData()
   .catch((e) => {
     console.error(e);
   })
