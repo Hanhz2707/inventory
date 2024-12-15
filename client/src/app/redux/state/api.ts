@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export interface Dashboard {
-  popularProdcuts: Product[];
+  popularProducts: Product[];
   salesSummary: SaleSummary[];
   purchaseSummary: PurchaseSummary[];
   expenseSummary: ExpenseSummary[];
@@ -55,4 +55,5 @@ export const api = createApi({
   }),
 });
 
+console.log(process.env.NEXT_PUBLIC_API_BASE_URL);
 export const { useGetDashboardQuery } = api;
