@@ -54,7 +54,7 @@ const getDashboard = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         });
     }
     catch (error) {
-        res.status(500).json({ error: error });
+        res.status(500).json({ error: "Error while retrieving dashboard data" });
     }
 });
 exports.getDashboard = getDashboard;

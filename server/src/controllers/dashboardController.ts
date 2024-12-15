@@ -60,6 +60,6 @@ export const getDashboard = async (
       expenseByCategorySummary,
     });
   } catch (error) {
-    res.status(500).json({ error: error });
+    res.status(500).json({ error: "Error while retrieving dashboard data" });
   }
 };
