@@ -1,6 +1,7 @@
 import React from "react";
 import { useGetDashboardQuery } from "../redux/state/api";
 import ProductRate from "../components/rating/rating";
+import { ShoppingCart } from "lucide-react";
 
 const cardPopularProduct = () => {
   const { data, isLoading } = useGetDashboardQuery();
@@ -31,7 +32,7 @@ const cardPopularProduct = () => {
                         {product.name}
                       </div>
                       <div className="flex text-sm items-center">
-                        <span className="font-bold text-blue-500 text-xs">
+                        <span className="font-bold text-black text-xs">
                           {product.price}€
                         </span>
                         <span className="mx-2">|</span>
@@ -42,7 +43,12 @@ const cardPopularProduct = () => {
                 </div>
 
                 {/* Right side */}
-                <div></div>
+                <div className="text-xs flex items-center">
+                  <button className="p-2 rounded-full bg-blue-100 text-black mr-2">
+                    <ShoppingCart size={25} />
+                  </button>
+                  {Math.round(product.stockQuantity / 1000)}k Sold
+                </div>
               </div>
             ))}
           </div>
