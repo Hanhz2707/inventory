@@ -5,7 +5,6 @@ import { ShoppingCart } from "lucide-react";
 
 const cardPopularProduct = () => {
   const { data, isLoading } = useGetDashboardQuery();
-  console.log(data);
 
   return (
     <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl pb-16">
