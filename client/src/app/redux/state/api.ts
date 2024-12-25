@@ -17,6 +17,13 @@ export interface Product {
   stockQuantity: number;
 }
 
+export interface newProduct {
+  name: string;
+  price: number;
+  rating: number;
+  stockQuantity: number;
+}
+
 export interface SaleSummary {
   saleSummaryId: number;
   totalValue: number;
@@ -53,14 +60,32 @@ export interface Users {
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
-  tagTypes: ["Dashboard"],
+  tagTypes: ["Dashboard", "Product"],
   endpoints: (build) => ({
     getDashboard: build.query<Dashboard, void>({
       query: () => "/dashboard",
       providesTags: ["Dashboard"],
     }),
+    getProducts: build.query<Product[], string | void>({
+      query: (search) => ({
+        url: "/products",
+        params: search ? { search } : {},
+      }),
+      providesTags: ["Product"],
+    }),
+    createProduct: build.mutation<Product, newProduct>({
+      query: (newProduct) => ({
+        url: "/products",
+        method: "POST",
+        body: newProduct,
+      }),
+      invalidatesTags: ["Product"],
+    }),
   }),
 });
 
-console.log(process.env.NEXT_PUBLIC_API_BASE_URL);
-export const { useGetDashboardQuery } = api;
+export const {
+  useGetDashboardQuery,
+  useGetProductsQuery,
+  useCreateProductMutation,
+} = api;
