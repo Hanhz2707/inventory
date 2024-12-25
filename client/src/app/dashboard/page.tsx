@@ -5,6 +5,9 @@ import CardPopularProduct from "./cardPopularProduct";
 import CardSaleSummary from "./cardSaleSummary";
 import { Card } from "@mui/material";
 import CardPurchaseSummary from "./cardPurchaseSummary";
+import CardExpenseSummary from "./cardExpenseSummary";
+import CardCustomer from "./cardCustomer";
+import { Package } from "lucide-react";
 
 const Dashboard = () => {
   return (
@@ -12,10 +15,65 @@ const Dashboard = () => {
       <CardPopularProduct />
       <CardSaleSummary />
       <CardPurchaseSummary />
-      <div className="row-span-3 bg-gray-500"></div>
-      <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div>
-      <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div>
-      <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div>
+      <CardExpenseSummary />
+      <CardCustomer
+        title="Customer and Expenses"
+        primaryIcon={<Package className="text-blue-600 w-6 h-6" />}
+        dateRange="Last 30 days"
+        details={[
+          {
+            title: "Customers",
+            value: "1,200",
+            changePercentage: 20,
+            IconComponent: Package,
+          },
+          {
+            title: "Expenses",
+            value: "€ 3,000",
+            changePercentage: -10,
+            IconComponent: Package,
+          },
+        ]}
+      />
+      <CardCustomer
+        title="Customer and Expenses"
+        primaryIcon={<Package className="text-blue-600 w-6 h-6" />}
+        dateRange="Last 30 days"
+        details={[
+          {
+            title: "Customers",
+            value: "1,200",
+            changePercentage: 20,
+            IconComponent: Package,
+          },
+          {
+            title: "Expenses",
+            value: "€ 3,000",
+            changePercentage: -10,
+            IconComponent: Package,
+          },
+        ]}
+      />
+      <CardCustomer
+        title="Customer and Expenses"
+        primaryIcon={<Package className="text-blue-600 w-6 h-6" />}
+        dateRange="Last 30 days"
+        details={[
+          {
+            title: "Customers",
+            value: "1,200",
+            changePercentage: 20,
+            IconComponent: Package,
+          },
+          {
+            title: "Expenses",
+            value: "€ 3,000",
+            changePercentage: -10,
+            IconComponent: Package,
+          },
+        ]}
+      />
+      {/* <div className="md:row-span-1 xl:row-span-2 bg-gray-500"></div> */}
     </div>
   );
 };

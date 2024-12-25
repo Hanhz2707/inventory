@@ -6,6 +6,7 @@ export interface Dashboard {
   purchaseSummary: PurchaseSummary[];
   expenseSummary: ExpenseSummary[];
   expenseByCategorySummary: ExpenseByCategorySummary[];
+  user: Users[];
 }
 
 export interface Product {
@@ -41,6 +42,12 @@ export interface ExpenseByCategorySummary {
   category: string;
   amount: string;
   date: string;
+}
+
+export interface Users {
+  userId: number;
+  name: string;
+  email: string;
 }
 
 export const api = createApi({
