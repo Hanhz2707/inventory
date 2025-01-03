@@ -48,7 +48,7 @@ const cardExpenseSummary = () => {
         <>
           {/* Header */}
           <div>
-            <h2 className="text-lg font-semibold mb-2 px-7 pt-5">
+            <h2 className="text-base font-bold text-gray-700 mb-2 px-7 pt-5">
               Expense Summary
             </h2>
             <hr />
@@ -84,10 +84,12 @@ const cardExpenseSummary = () => {
               {expenseCategories.map((category, index) => (
                 <li key={index}>
                   <span
-                    className="rounded-full inline-block w-3 h-3 mr-2"
+                    className="rounded-full inline-block w-3 h-3 mr-2 "
                     style={{ backgroundColor: colors[index] }}
                   ></span>
-                  {category.name.replace("Expense", "")}
+                  <span className="text-gray-700 font-semibold">
+                    {category.name.replace("Expense", "")}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -98,9 +100,9 @@ const cardExpenseSummary = () => {
             {expenseSummary && (
               <div className="mt-3 flex justify-between items-center px-7 mb-4">
                 <div className="pt-2">
-                  <p className="text-sm">
+                  <p className="text-sm text-gray-400">
                     Average:{" "}
-                    <span className="font-bold">
+                    <span className="font-bold text-gray-700">
                       {(expenseSummary.totalExpenses / 1000000).toFixed(2)}M€
                     </span>
                   </p>
