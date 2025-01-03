@@ -1,9 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import { useGetProductsQuery } from "../redux/state/api";
+import {
+  useCreateProductMutation,
+  useGetProductsQuery,
+} from "../redux/state/api";
 import { SearchIcon } from "lucide-react";
 import { Rating } from "@mui/material";
+import CreateProductModal from "./createProductModal";
+
+interface ProductFormData {
+  name: string;
+  price: number;
+  stockQuantity: number;
+  rating: number;
+}
 
 const Products = () => {
   const [search, setSearch] = useState("");
@@ -11,6 +22,12 @@ const Products = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { data, isLoading, isError } = useGetProductsQuery(search);
+
+  const [createProduct] = useCreateProductMutation();
+
+  const handleCreateProduct = async (productData: ProductFormData) => {
+    await createProduct(productData).unwrap();
+  };
 
   if (isLoading) return <div>Loading...</div>;
 
@@ -72,7 +89,7 @@ const Products = () => {
           data.map((product) => (
             <div
               key={product.productId}
-              className="bg-white shadow-2xl rounded-lg overflow-hidden"
+              className="bg-white shadow-xl rounded-lg overflow-hidden"
             >
               <div className="w-full h-56 bg-cover bg-center">
                 <img
@@ -96,6 +113,13 @@ const Products = () => {
           ))
         )}
       </div>
+
+      {/* Modal */}
+      <CreateProductModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onCreate={handleCreateProduct}
+      />
     </div>
   );
 };
