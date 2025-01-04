@@ -23,7 +23,7 @@ const createProductModal = ({
   onClose,
   onCreate,
 }: createProductModalProps) => {
-  const { register, Submit } = useForm();
+  const { register } = useForm();
 
   const [formData, setFormData] = React.useState({
     productId: v4(),
