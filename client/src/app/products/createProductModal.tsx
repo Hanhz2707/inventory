@@ -3,6 +3,7 @@ import { v4 } from "uuid";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Header from "../components/header";
+import { register } from "module";
 
 interface ProductFormData {
   name: string;
@@ -22,6 +23,8 @@ const createProductModal = ({
   onClose,
   onCreate,
 }: createProductModalProps) => {
+  const { register, Submit } = useForm();
+
   const [formData, setFormData] = React.useState({
     productId: v4(),
     name: "",
@@ -63,6 +66,7 @@ const createProductModal = ({
               Product Name
             </label>
             <input
+              {...register("name")}
               id="name"
               placeholder="Enter product name"
               onChange={handleChange}
@@ -79,6 +83,7 @@ const createProductModal = ({
               Price
             </label>
             <input
+              {...register("price")}
               id="name"
               placeholder="Enter first name"
               onChange={handleChange}
@@ -95,6 +100,7 @@ const createProductModal = ({
               Stock Quantity
             </label>
             <input
+              {...register("stockQuantity")}
               id="name"
               placeholder="Enter first name"
               onChange={handleChange}
@@ -111,6 +117,8 @@ const createProductModal = ({
               Rating
             </label>
             <input
+              {...register("rating")}
+              type="number"
               id="name"
               placeholder="Enter first name"
               onChange={handleChange}
