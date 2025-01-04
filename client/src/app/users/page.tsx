@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 const columns: GridColDef[] = [
   { field: "userId", headerName: "ID", width: 300 },
   { field: "name", headerName: "Product Name", width: 150 },
-  { field: "email", headerName: "Email", width: 150 },
+  { field: "email", headerName: "Email", width: 300 },
 ];
 
 const UsersPage = () => {
