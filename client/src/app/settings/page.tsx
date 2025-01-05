@@ -25,14 +25,14 @@ type UserData = {
 
 const mockUserData = {
   profile: {
-    firstName: "John",
-    lastName: "Doe",
-    email: "john.doe@example.com",
-    phone: "+123456789",
+    firstName: "Hanhz",
+    lastName: "Pham",
+    email: "HanhPham@mockemail.com",
+    phone: "+358 123 456 789",
     avatar: "https://via.placeholder.com/100",
   },
   accountSettings: {
-    username: "johndoe",
+    username: "Hanhz",
     password: "********",
   },
   notificationPreferences: {
@@ -75,7 +75,7 @@ const UserSettingsPage = () => {
             alt="Avatar"
             className="w-16 h-16 rounded-full"
           />
-          <button className="px-4 py-2 bg-blue-500 text-white rounded-lg">
+          <button className="px-5 py-2 bg-gray-800 text-white text-sm font-bold uppercase rounded-lg hover:bg-gray-700 focus:ring-2 focus:ring-gray-600 transition-all duration-200">
             Change Avatar
           </button>
         </div>
@@ -239,8 +239,8 @@ const UserSettingsPage = () => {
       </div>
 
       {/* Save Button */}
-      <div className="flex justify-end">
-        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
+      <div className="flex justify-center mt-6">
+        <button className="px-5 py-2 bg-gray-800 text-white text-sm font-bold uppercase rounded-lg hover:bg-gray-700 focus:ring-2 focus:ring-gray-600 transition-all duration-200">
           Save Changes
         </button>
       </div>
