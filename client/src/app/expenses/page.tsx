@@ -63,12 +63,29 @@ const ExpensePage = () => {
     return Object.values(categories);
   }, [expenses, categoryFilter, startDate, endDate]);
 
+  // Improved Loading and Error Handling UI
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="flex items-center">
+          <span className="loader mr-2"></span>
+          <span className="text-lg text-gray-600">Loading...</span>
+        </div>
+      </div>
+    );
   }
 
   if (isError) {
-    return <div>Error</div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-red-600">Error</h2>
+          <p className="text-gray-500 mt-2">
+            Something went wrong while fetching data. Please try again later.
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -80,7 +97,6 @@ const ExpensePage = () => {
           Track and analyze your expenses effectively.
         </p>
       </div>
-
       {/* Filters Section */}
       <div className="mb-8 bg-white rounded-lg shadow-md p-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-4">
@@ -119,6 +135,7 @@ const ExpensePage = () => {
               className="w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
+              placeholder="YYYY-MM-DD"
             />
           </div>
 
@@ -132,6 +149,7 @@ const ExpensePage = () => {
               className="w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
+              placeholder="YYYY-MM-DD"
             />
           </div>
         </div>
@@ -171,8 +189,8 @@ const ExpensePage = () => {
 
         {/* Pie Chart */}
         <div className="col-span-2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
-          <ResponsiveContainer width="90%" height={300}>
-            <PieChart>
+          <ResponsiveContainer width="90%" height={400}>
+            <PieChart width={400}>
               <Pie
                 data={expenseCategories}
                 dataKey="amount"
