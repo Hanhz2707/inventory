@@ -97,4 +97,5 @@ export const {
   useGetProductsQuery,
   useCreateProductMutation,
   useGetUsersQuery,
+  useGetExpenseByCategoryQuery,
 } = api;
