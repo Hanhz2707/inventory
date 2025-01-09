@@ -12,7 +12,7 @@ import {
 } from "recharts";
 
 const CardSaleSummary = () => {
-  const { data, isLoading, isError } = useGetDashboardQuery();
+  const { data, isLoading } = useGetDashboardQuery();
 
   const saleData = data?.saleSummary || [];
   const [timeFrame, setTimeFrame] = useState("weekly");
