@@ -1,6 +1,5 @@
 import { LucideIcon } from "lucide-react";
 import React from "react";
-import { useGetDashboardQuery } from "../redux/state/api";
 
 type cardRevenueProps = {
   title: string;

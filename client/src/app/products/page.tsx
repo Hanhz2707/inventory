@@ -47,30 +47,6 @@ const Products = () => {
           />
         </div>
       </div>
-
-      {/* Header Bar */}
-      {/* <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Products</h1>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded-lg hover:bg-gray-700 focus:ring-2 focus:ring-gray-600 transition-all duration-200"
-        >
-          Add Product
-        </button>
-      </div> */}
-
-      {/* <div className="flex justify-between items-center bg-gray-900 p-4 rounded-md shadow-lg">
-        <h1 className="text-2xl font-extrabold text-white tracking-wide">
-          Products
-        </h1>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded-lg hover:bg-gray-700 focus:ring-2 focus:ring-gray-600 transition-all duration-200"
-        >
-          Add Product
-        </button>
-      </div> */}
-
       <div className="flex justify-between items-center p-4 rounded-md ">
         <h1 className="text-3xl font-extrabold ">Products</h1>
         <button

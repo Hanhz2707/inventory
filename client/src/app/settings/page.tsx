@@ -29,7 +29,7 @@ const mockUserData = {
     lastName: "Pham",
     email: "HanhPham@mockemail.com",
     phone: "+358 123 456 789",
-    avatar: "https://via.placeholder.com/100",
+    avatar: "",
   },
   accountSettings: {
     username: "Hanhz",

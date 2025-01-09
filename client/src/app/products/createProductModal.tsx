@@ -1,9 +1,7 @@
 import React from "react";
-import { v4 } from "uuid";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { v4 } from "uuid";
 import Header from "../components/header";
-import { register } from "module";
 
 interface ProductFormData {
   name: string;
