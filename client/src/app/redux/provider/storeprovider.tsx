@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import { AppStore } from "../types/types";
 import { makeStore } from "../store/store";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { persistStore } from "redux-persist";
 
 /*
  * This component will create the store and share it
