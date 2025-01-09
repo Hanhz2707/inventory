@@ -12,7 +12,7 @@ type ExpenseSum = {
   [category: string]: number;
 };
 
-const cardExpenseSummary = () => {
+const CardExpenseSummary = () => {
   const { data, isLoading } = useGetDashboardQuery();
 
   const expenseByCategory = data?.expenseByCategorySummary || [];
@@ -119,4 +119,4 @@ const cardExpenseSummary = () => {
   );
 };
 
-export default cardExpenseSummary;
+export default CardExpenseSummary;
