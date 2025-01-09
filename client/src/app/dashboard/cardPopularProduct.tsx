@@ -2,6 +2,7 @@ import React from "react";
 import { useGetDashboardQuery } from "../redux/state/api";
 import ProductRate from "../components/rating/rating";
 import { ShoppingCart } from "lucide-react";
+import Image from "next/image";
 
 const CardPopularProduct = () => {
   const { data, isLoading } = useGetDashboardQuery();
@@ -27,7 +28,14 @@ const CardPopularProduct = () => {
                 {/* Left Side: Image + Info */}
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-sm text-gray-400">img</span>
+                    <Image
+                      src={`https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/product${
+                        Math.floor(Math.random() * 10) + 1
+                      }.jpg`}
+                      width={100}
+                      height={100}
+                      alt={product.name}
+                    />
                   </div>
                   <div>
                     <div className="font-bold text-gray-700 text-sm">

@@ -13,6 +13,7 @@ import {
 import React from "react";
 import { setIsSidebarCollapsed } from "../../redux/state/index";
 import SidebarLink from "./sidebarlink";
+import Image from "next/image";
 
 const SideBar = () => {
   const dispatch = useAppDispatch();
@@ -37,14 +38,19 @@ const SideBar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         } `}
       >
-        <div>logo</div>
-        <h1
+        <Image
+          src="https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/logo3.png"
+          width={200}
+          height={200}
+          alt="Logo"
+        />
+        {/* <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
           } font-extrabold text-2xl`}
         >
           Bitis
-        </h1>
+        </h1> */}
         <button
           className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
           onClick={toggleSidebar}

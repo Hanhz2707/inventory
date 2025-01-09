@@ -8,6 +8,7 @@ import {
 import { SearchIcon } from "lucide-react";
 import { Rating } from "@mui/material";
 import CreateProductModal from "./createProductModal";
+import Image from "next/image";
 
 interface ProductFormData {
   name: string;
@@ -67,10 +68,14 @@ const Products = () => {
               key={product.productId}
               className="bg-white shadow-xl rounded-lg overflow-hidden"
             >
-              <div className="w-full h-56 bg-cover bg-center">
-                <img
+              <div className="w-full h-56 bg-cover bg-center justify-center items-center flex">
+                <Image
+                  src={`https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/product${
+                    Math.floor(Math.random() * 10) + 1
+                  }.jpg`}
+                  width={200}
+                  height={200}
                   alt={product.name}
-                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-4">
