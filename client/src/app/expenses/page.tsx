@@ -23,7 +23,7 @@ const ExpensePage = () => {
   const { data, isLoading, isError } = useGetExpenseByCategoryQuery();
 
   // State for filters
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [, setActiveIndex] = useState(0);
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");

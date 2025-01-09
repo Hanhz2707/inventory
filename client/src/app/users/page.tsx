@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useGetProductsQuery, useGetUsersQuery } from "../redux/state/api";
+import { useGetUsersQuery } from "../redux/state/api";
 import Header from "../components/header";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Box from "@mui/material/Box";

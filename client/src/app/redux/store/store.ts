@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
 import {
   persistReducer,
   FLUSH,
@@ -8,42 +8,42 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import { api } from '../state/api';
-import globalReducer from '../state';
+import { api } from "../state/api";
+import globalReducer from "../state";
 import { combineReducers } from "@reduxjs/toolkit";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
-
-
 const createNoopStorage = () => {
   return {
-    getItem(_key: any) {
+    getItem() {
       return Promise.resolve(null);
     },
-    setItem(_key: any, value: any) {
+    setItem(value: any) {
       return Promise.resolve(value);
     },
-    removeItem(_key: any) {
+    removeItem() {
       return Promise.resolve();
     },
   };
 };
 
 // If we are in the server, we use a noop storage, else we use local storage
-const storage = typeof window === "undefined" ? createNoopStorage() : createWebStorage("local");
+const storage =
+  typeof window === "undefined"
+    ? createNoopStorage()
+    : createWebStorage("local");
 
 // Setting up persistence for Redux store, use storage to persist the data
 const persistConfig = {
   key: "root",
   storage,
   whitelist: ["global"],
-}
+};
 
 const rootReducer = combineReducers({
   global: globalReducer,
   [api.reducerPath]: api.reducer,
 });
-
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
@@ -56,6 +56,5 @@ export const makeStore = () => {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
       }).concat(api.middleware),
-  })
-}
-
+  });
+};

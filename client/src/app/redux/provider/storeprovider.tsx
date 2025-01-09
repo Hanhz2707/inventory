@@ -24,7 +24,5 @@ export default function StoreProvider({
     setupListeners(storeRef.current.dispatch);
   }
 
-  const persistor = persistStore(storeRef.current);
-
   return <Provider store={storeRef.current}>{children}</Provider>;
 }
