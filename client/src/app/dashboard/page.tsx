@@ -1,23 +1,19 @@
 "use client";
 
-import React from "react";
-import CardPopularProduct from "./cardPopularProduct";
-import CardSaleSummary from "./cardSaleSummary";
-import { Card } from "@mui/material";
-import CardPurchaseSummary from "./cardPurchaseSummary";
-import CardExpenseSummary from "./cardExpenseSummary";
-import CardCustomer from "./cardCustomer";
 import {
   CheckCircle,
   Clock,
   DollarSign,
   List,
   MessageCircle,
-  Package,
 } from "lucide-react";
-import CardRevenue from "./cardCustomer";
-import CardTasks from "./cardTasks";
 import CardCollaboration from "./cardCollaboration";
+import CardRevenue from "./cardCustomer";
+import CardExpenseSummary from "./cardExpenseSummary";
+import CardPopularProduct from "./cardPopularProduct";
+import CardPurchaseSummary from "./cardPurchaseSummary";
+import CardSaleSummary from "./cardSaleSummary";
+import CardTasks from "./cardTasks";
 
 const Dashboard = () => {
   const revenueStats = [
