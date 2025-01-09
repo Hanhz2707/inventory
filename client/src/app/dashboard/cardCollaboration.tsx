@@ -1,27 +1,25 @@
 import { LucideIcon } from "lucide-react";
 import React from "react";
-import { useGetDashboardQuery } from "../redux/state/api";
 
-type cardRevenueProps = {
+type CardCollaborationProps = {
   title: string;
   primaryIcon: JSX.Element;
-  stats: StatDetail[];
+  stats: CollaborationStat[];
   dateRange: string;
 };
 
-type StatDetail = {
+type CollaborationStat = {
   title: string;
   value: string | number;
-  changePercentage?: number;
-  IconComponent?: LucideIcon;
+  trendPercentage?: number; // Optional for trend changes
 };
 
-const CardRevenue = ({
+const CardCollaboration = ({
   title,
   primaryIcon,
   stats,
   dateRange,
-}: cardRevenueProps) => {
+}: CardCollaborationProps) => {
   const formatPercentage = (percentage?: number) =>
     percentage != null
       ? percentage > 0
@@ -29,7 +27,7 @@ const CardRevenue = ({
         : `${percentage}%`
       : "N/A";
 
-  const getChangeColor = (value?: number) =>
+  const getTrendColor = (value?: number) =>
     value != null && value > 0 ? "text-green-500" : "text-red-500";
 
   return (
@@ -43,7 +41,7 @@ const CardRevenue = ({
       </div>
 
       <div className="flex mb-6 items-center justify-around gap-4 px-5">
-        <div className="rounded-full p-5 bg-green-50 border-green-300 border-[1px]">
+        <div className="rounded-full p-5 bg-purple-50 border-purple-300 border-[1px]">
           {primaryIcon}
         </div>
         <div className="flex-1">
@@ -52,9 +50,9 @@ const CardRevenue = ({
               <span className="text-gray-700">{stat.title}</span>
               <span className="flex items-center gap-2">
                 <span className="font-semibold">{stat.value}</span>
-                {stat.changePercentage != null && (
-                  <span className={getChangeColor(stat.changePercentage)}>
-                    {formatPercentage(stat.changePercentage)}
+                {stat.trendPercentage != null && (
+                  <span className={getTrendColor(stat.trendPercentage)}>
+                    {formatPercentage(stat.trendPercentage)}
                   </span>
                 )}
               </span>
@@ -66,4 +64,4 @@ const CardRevenue = ({
   );
 };
 
-export default CardRevenue;
+export default CardCollaboration;
