@@ -1,6 +1,9 @@
 import { LucideIcon } from "lucide-react";
 import React from "react";
 
+/**
+ * Type for the props of the CardTasks component
+ */
 type CardTasksProps = {
   title: string;
   primaryIcon: JSX.Element;
@@ -8,12 +11,25 @@ type CardTasksProps = {
   dateRange: string;
 };
 
+/**
+ * Type for the TaskStatArray for the CardTasks component
+ */
 type TaskStat = {
   title: string;
   value: string | number;
   icon?: LucideIcon;
 };
 
+/**
+ * CardTasks component
+ *
+ * @param title - The title of the card
+ * @param primaryIcon - The primary icon of the card
+ * @param stats - The stats to display in the card
+ * @param dateRange - The date range for the stats
+ *
+ * @returns The CardTasks component
+ */
 const CardTasks = ({
   title,
   primaryIcon,

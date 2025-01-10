@@ -5,9 +5,12 @@ import { AppStore } from "../types/types";
 import { makeStore } from "../store/store";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
-/*
- * This component will create the store and share it
- * using React-Redux Provider component.
+/**
+ * Store Provider component
+ *
+ * @param children - The children to render
+ *
+ * @returns The Store Provider component
  */
 export default function StoreProvider({
   children,

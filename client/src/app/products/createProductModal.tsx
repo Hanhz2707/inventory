@@ -5,6 +5,9 @@ import { useForm } from "react-hook-form";
 import { v4 } from "uuid";
 import Header from "../components/header";
 
+/**
+ * Type for the ProductFormData
+ */
 interface ProductFormData {
   name: string;
   price: number;
@@ -12,12 +15,24 @@ interface ProductFormData {
   rating: number;
 }
 
+/**
+ * Type for the props of the CreateProductModal component
+ */
 interface createProductModalProps {
   isOpen: boolean;
   onClose: () => void;
   onCreate: (formData: ProductFormData) => void;
 }
 
+/**
+ * CreateProductModal component
+ *
+ * @param isOpen - The state of the modal
+ * @param onClose - The function to close the modal
+ * @param onCreate - The function to create a new product
+ *
+ * @returns The CreateProductModal component
+ */
 const CreateProductModal = ({
   isOpen,
   onClose,
@@ -35,12 +50,24 @@ const CreateProductModal = ({
 
   if (!isOpen) return null;
 
+  /**
+   * Function to handle the submit event
+   *
+   * @param e - Type React.FormEvent
+   *
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onCreate(formData);
     onClose();
   };
 
+  /**
+   * Function to handle the change event
+   *
+   * @param e - Type React.ChangeEvent
+   *
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({

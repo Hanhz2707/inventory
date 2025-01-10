@@ -1,6 +1,10 @@
 "use client";
+
 import React, { useState } from "react";
 
+/**
+ * Type for the UserData (Mock Data)
+ */
 type UserData = {
   profile: {
     firstName: string;
@@ -48,6 +52,13 @@ const mockUserData = {
 const UserSettingsPage = () => {
   const [userData, setUserData] = useState(mockUserData);
 
+  /**
+   * Function to handle the input change
+   *
+   * @param section - Type keyof UserData
+   * @param field - Type keyof UserData[T]
+   * @param value - Type UserData[T][typeof field]
+   */
   const handleInputChange = <T extends keyof UserData>(
     section: T,
     field: keyof UserData[T],

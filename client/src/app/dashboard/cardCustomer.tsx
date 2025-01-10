@@ -1,6 +1,8 @@
 import { LucideIcon } from "lucide-react";
 import React from "react";
-
+/**
+ * Type for the props of the CardRevenue component
+ */
 type cardRevenueProps = {
   title: string;
   primaryIcon: JSX.Element;
@@ -8,6 +10,9 @@ type cardRevenueProps = {
   dateRange: string;
 };
 
+/**
+ * Type for the StatDetailArray for the CardRevenue component
+ */
 type StatDetail = {
   title: string;
   value: string | number;
@@ -15,12 +20,29 @@ type StatDetail = {
   IconComponent?: LucideIcon;
 };
 
+/**
+ * CardRevenue component
+ *
+ * @param title - The title of the card
+ * @param primaryIcon - The primary icon of the card
+ * @param stats - The stats to display in the card
+ * @param dateRange - The date range for the stats
+ *
+ * @returns The CardRevenue component
+ */
 const CardRevenue = ({
   title,
   primaryIcon,
   stats,
   dateRange,
 }: cardRevenueProps) => {
+  /**
+   * Function to format the percentage
+   *
+   * @param percentage - Type number
+   *
+   * @returns The formatted percentage or "N/A" if the percentage is null
+   */
   const formatPercentage = (percentage?: number) =>
     percentage != null
       ? percentage > 0
@@ -28,6 +50,13 @@ const CardRevenue = ({
         : `${percentage}%`
       : "N/A";
 
+  /**
+   * Function to get the color based on the value
+   *
+   * @param value - Type number
+   *
+   * @returns The color class based on the value if the value is greater than 0, otherwise "text-red-500"
+   */
   const getChangeColor = (value?: number) =>
     value != null && value > 0 ? "text-green-500" : "text-red-500";
 

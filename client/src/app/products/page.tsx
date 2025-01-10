@@ -10,6 +10,9 @@ import { Rating } from "@mui/material";
 import CreateProductModal from "./createProductModal";
 import Image from "next/image";
 
+/**
+ * Type for the ProductFormData
+ */
 interface ProductFormData {
   name: string;
   price: number;
@@ -26,6 +29,11 @@ const Products = () => {
 
   const [createProduct] = useCreateProductMutation();
 
+  /**
+   * Function to handle the create product event
+   *
+   * @param productData - Type ProductFormData
+   */
   const handleCreateProduct = async (productData: ProductFormData) => {
     await createProduct(productData).unwrap();
   };

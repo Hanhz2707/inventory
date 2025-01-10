@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Type for the props of the CardCollaboration component
+ */
 type CardCollaborationProps = {
   title: string;
   primaryIcon: JSX.Element;
@@ -7,18 +10,38 @@ type CardCollaborationProps = {
   dateRange: string;
 };
 
+/**
+ * Type for the CollaborationStatArray for the CardCollaboration component
+ */
 type CollaborationStat = {
   title: string;
   value: string | number;
-  trendPercentage?: number; // Optional for trend changes
+  trendPercentage?: number;
 };
 
+/**
+ * CardCollaboration component
+ *
+ * @param title - The title of the card
+ * @param primaryIcon - The primary icon of the card
+ * @param stats - The stats to display in the card
+ * @param dateRange - The date range for the stats
+ *
+ * @returns The CardCollaboration component
+ */
 const CardCollaboration = ({
   title,
   primaryIcon,
   stats,
   dateRange,
 }: CardCollaborationProps) => {
+  /**
+   * Function to format the percentage
+   *
+   * @param percentage - Type number
+   *
+   * @returns The formatted percentage or "N/A" if the percentage is null
+   */
   const formatPercentage = (percentage?: number) =>
     percentage != null
       ? percentage > 0
@@ -26,6 +49,13 @@ const CardCollaboration = ({
         : `${percentage}%`
       : "N/A";
 
+  /**
+   * Function to get the trend color
+   *
+   * @param value - Type number
+   *
+   * @returns The color class based on the value if the value is greater than 0, otherwise "text-red-500"
+   */
   const getTrendColor = (value?: number) =>
     value != null && value > 0 ? "text-green-500" : "text-red-500";
 

@@ -3,6 +3,13 @@ import SideBar from "./components/sidebar/sidebar";
 import Navbar from "./components/navbar/navbar";
 import { useAppSelector } from "./redux/types/types";
 
+/**
+ * Dashboard Layout component
+ *
+ * @param children - The children to render
+ *
+ * @returns The Dashboard Layout component
+ */
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const isSidebarCollapsed = useAppSelector(
     (state) => state.global.isSideBarCollapsed

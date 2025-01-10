@@ -7,12 +7,18 @@ import {
   useGetExpenseByCategoryQuery,
 } from "../redux/state/api";
 
+/*
+ * Type for the ExpenseCategoriesItem
+ */
 interface ExpenseCategoriesItem {
   name: string;
   color?: string;
   amount: number;
 }
 
+/*
+ * Type for the ExpenseCategories
+ */
 interface ExpenseCategories {
   [category: string]: ExpenseCategoriesItem;
 }
@@ -22,7 +28,6 @@ const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#A28CF2"];
 const ExpensePage = () => {
   const { data, isLoading, isError } = useGetExpenseByCategoryQuery();
 
-  // State for filters
   const [, setActiveIndex] = useState(0);
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [startDate, setStartDate] = useState("");
@@ -30,6 +35,13 @@ const ExpensePage = () => {
 
   const expenses = useMemo(() => data ?? [], [data]);
 
+  /**
+   * Fuction to parse the date
+   *
+   * @param datestring type string
+   *
+   * @returns The date in the format of "MM/DD/YYYY"
+   */
   const parseDate = (datestring: string) => {
     const date = new Date(datestring);
     return date.toLocaleDateString().split("T")[0];
@@ -64,7 +76,6 @@ const ExpensePage = () => {
     return Object.values(categories);
   }, [expenses, categoryFilter, startDate, endDate]);
 
-  // Improved Loading and Error Handling UI
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">

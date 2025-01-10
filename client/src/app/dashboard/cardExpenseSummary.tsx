@@ -8,6 +8,9 @@ import { TrendingUp } from "lucide-react";
 
 const colors = ["#00C49F", "#0088FE", "#FFBB28"];
 
+/**
+ * Type for the ExpenseSum
+ */
 type ExpenseSum = {
   [category: string]: number;
 };

@@ -24,17 +24,6 @@ const UsersPage = () => {
   }
 
   return (
-    // <div className="flex flex-col">
-    //   <Header name="Inventory" />
-    //   <Box sx={{ height: "100%", width: "100%" }}>
-    //     <DataGrid
-    //       rows={data}
-    //       columns={columns}
-    //       getRowId={(row) => row.productId}
-    //       checkboxSelection
-    //     />
-    //   </Box>
-    // </div>
     <div className="flex flex-col space-y-4 p-6 bg-gray-50 rounded-lg shadow-lg h-full">
       {/* Header */}
       <Header name="Users" />
