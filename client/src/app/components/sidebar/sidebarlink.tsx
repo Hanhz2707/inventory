@@ -3,6 +3,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+/**
+ * Interface for SidebarLinkProps
+ */
 interface SidebarLinkProps {
   href: string;
   icon: LucideIcon;
@@ -10,6 +13,16 @@ interface SidebarLinkProps {
   isCollapsed: boolean;
 }
 
+/**
+ * SidebarLink Component
+ *
+ * @param href
+ * @param icon
+ * @param label
+ * @param isCollapsed
+ *
+ * @returns
+ */
 const SidebarLink = ({
   href,
   icon: Icon,

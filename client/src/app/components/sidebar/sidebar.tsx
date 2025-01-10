@@ -28,39 +28,37 @@ const SideBar = () => {
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
-  } bg-white transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
+  } bg-white transition-all duration-300 overflow-hidden h-full shadow-lg z-40`;
 
   return (
     <div className={sidebarClassNames}>
-      {/* TOP */}
+      {/* Top Section */}
       <div
-        className={`flex justify-between gap-3 md:justify-normal items-center pt-8 ${
+        className={`flex items-center justify-between ${
           isSidebarCollapsed ? "px-5" : "px-8"
-        } `}
+        } py-6`}
       >
-        <Image
-          src="https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/logo3.png"
-          width={200}
-          height={200}
-          alt="Logo"
-        />
-        {/* <h1
-          className={`${
-            isSidebarCollapsed ? "hidden" : "block"
-          } font-extrabold text-2xl`}
-        >
-          Bitis
-        </h1> */}
+        <div className={`flex items-center gap-2`}>
+          <Image
+            src="https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/logo3.png"
+            width={isSidebarCollapsed ? 40 : 200}
+            height={40}
+            alt="Logo"
+            className="transition-all duration-300"
+          />
+          {!isSidebarCollapsed}
+        </div>
         <button
-          className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
+          className="md:hidden p-3 bg-gray-100 rounded-full hover:bg-gray-200 focus:ring-2 focus:ring-blue-500"
           onClick={toggleSidebar}
+          aria-label="Toggle Sidebar"
         >
-          <Menu className="w-4 h-4" />
+          <Menu className="w-5 h-5 text-gray-600" />
         </button>
       </div>
 
       {/* Links */}
-      <div className="flex-grow-8 mt-8">
+      <div className="flex-grow mt-4 space-y-2">
         <SidebarLink
           href="/dashboard"
           icon={Layout}
@@ -99,10 +97,14 @@ const SideBar = () => {
         />
       </div>
 
-      {/* Footers */}
-      <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10"`}>
+      {/* Footer */}
+      <div
+        className={`${
+          isSidebarCollapsed ? "hidden" : "block"
+        } mt-auto px-4 py-6`}
+      >
         <p className="text-center text-xs text-gray-500">
-          &copy; 2025 BitisHunterFI
+          &copy; {new Date().getFullYear()} BitisHunterFI
         </p>
       </div>
     </div>
