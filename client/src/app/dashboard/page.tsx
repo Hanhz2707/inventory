@@ -33,10 +33,8 @@ const Dashboard = () => {
   ];
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:overflow-auto gap-10 pb-4 custom-grid-rows">
-      <CardPopularProduct />
-      <CardSaleSummary />
       <CardPurchaseSummary />
-      <CardExpenseSummary />
+      <CardSaleSummary />
       <CardRevenue
         title="Revenue and Performance"
         primaryIcon={<DollarSign size={24} />}
@@ -49,12 +47,14 @@ const Dashboard = () => {
         stats={taskStats}
         dateRange="Last 7 days"
       />
+      <CardExpenseSummary />
       <CardCollaboration
         title="Team Collaboration"
         primaryIcon={<MessageCircle size={24} />}
         stats={collaborationStats}
         dateRange="This Week"
       />
+      <CardPopularProduct />
     </div>
   );
 };

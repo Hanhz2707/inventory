@@ -8,7 +8,7 @@ const CardPopularProduct = () => {
   const { data, isLoading } = useGetDashboardQuery();
 
   return (
-    <div className="row-span-3 xl:row-span-6 bg-white shadow-lg rounded-2xl pb-16 px-8 pt-6">
+    <div className="row-span-3 xl:row-span-3 md:col-span-2 xl:col-span-3 bg-white shadow-lg rounded-2xl pb-16 px-8 pt-6">
       {isLoading ? (
         <div className="text-center text-gray-500">Loading...</div>
       ) : (
