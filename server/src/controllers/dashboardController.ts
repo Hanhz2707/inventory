@@ -9,7 +9,7 @@ export const getDashboard = async (
 ): Promise<void> => {
   try {
     const popularProducts = await prisma.products.findMany({
-      take: 35,
+      take: 5,
       orderBy: {
         stockQuantity: "desc",
       },
