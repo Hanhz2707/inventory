@@ -38,7 +38,7 @@ const CardSaleSummary = () => {
     : "N/A";
 
   return (
-    <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-lg flex flex-col justify-between">
+    <div className="row-span-3 xl:row-span-3 bg-white shadow-md rounded-lg flex flex-col justify-between">
       {isLoading ? (
         <div className="text-center py-10 text-gray-500">Loading...</div>
       ) : (
@@ -77,7 +77,7 @@ const CardSaleSummary = () => {
             </div>
 
             {/* Chart */}
-            <div className="h-64">
+            <div className="h-36">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={saleData}
@@ -121,7 +121,7 @@ const CardSaleSummary = () => {
           <div className="px-6 py-4 border-t flex justify-between items-center text-sm text-gray-500">
             <p>{saleData.length || 0} days</p>
             <p>
-              Highest Sale Date:{" "}
+              Highest Sale Date: {" "}
               <span className="font-semibold text-gray-700">
                 {highestValueDate}
               </span>
