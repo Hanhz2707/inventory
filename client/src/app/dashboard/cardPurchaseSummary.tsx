@@ -13,7 +13,6 @@ import {
 
 const CardPurchaseSummary = () => {
   const { data, isLoading } = useGetDashboardQuery();
-
   const purchaseData = data?.purchaseSummary || [];
   const lastDataPoint = purchaseData[purchaseData.length - 1] || {};
 

@@ -1,13 +1,6 @@
-
 import React, { useState } from "react";
 
-
-
-
-
 const SessionByLocation = () => {
-
-
   return (
     <div className="row-span-2 xl:row-span-2 bg-white shadow-md rounded-2xl flex flex-col p-2 space-y-1  justify-center">
       <div className="p-[8px]">
