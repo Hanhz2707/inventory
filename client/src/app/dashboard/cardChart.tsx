@@ -25,7 +25,7 @@ const CardSaleSummary = () => {
     <div className="row-span-3 xl:row-span-3 bg-white shadow-md rounded-lg flex flex-col justify-between">
       {/* Header */}
       <div className="px-8 py-3 border-b">
-        <h2 className="text-xl font-bold text-gray-700">Monthly Expense</h2>
+        <h2 className="text-base font-bold text-gray-700">Monthly Expense</h2>
       </div>
 
       {/* Body */}

@@ -33,7 +33,7 @@ const CardTasks = (
           </div>
           <div className="mt-1 w-full bg-gray-200 rounded-full h-3">
             <div
-              className="h-full bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 w-2/3 rounded-full"
+              className="h-full bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 w-36 rounded-full"
             ></div>
           </div>
         </div>

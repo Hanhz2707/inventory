@@ -27,7 +27,7 @@ const CardPurchaseSummary = () => {
         <>
           {/* Header */}
           <div className="px-6 py-4 border-b">
-            <h2 className="text-lg font-bold text-gray-700">
+            <h2 className="text-base font-bold text-gray-800">
               Purchase Summary
             </h2>
           </div>

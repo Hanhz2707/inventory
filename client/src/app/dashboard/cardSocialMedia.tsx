@@ -58,7 +58,7 @@ const cardSocialMedia = (
           </div>
           <div className="mt-1 w-full bg-gray-200 rounded-full h-3 mb-1">
             <div
-            className="h-full bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 w-1/2 rounded-full"
+            className="h-full bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 w-80 rounded-full"
             />
           </div>
         </div>
