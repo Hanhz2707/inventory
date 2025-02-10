@@ -1,42 +1,8 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 
-/**
- * CardRevenue component
- *
- * @param title - The title of the card
- * @param primaryIcon - The primary icon of the card
- * @param stats - The stats to display in the card
- * @param dateRange - The date range for the stats
- *
- * @returns The CardRevenue component
- */
 const cardSocialMedia = (
 ) => {
-  /**
-   * Function to format the percentage
-   *
-   * @param percentage - Type number
-   *
-   * @returns The formatted percentage or "N/A" if the percentage is null
-   */
-  const formatPercentage = (percentage?: number) =>
-    percentage != null
-      ? percentage > 0
-        ? `+${percentage}%`
-        : `${percentage}%`
-      : "N/A";
-
-  /**
-   * Function to get the color based on the value
-   *
-   * @param value - Type number
-   *
-   * @returns The color class based on the value if the value is greater than 0, otherwise "text-red-500"
-   */
-  const getChangeColor = (value?: number) =>
-    value != null && value > 0 ? "text-green-500" : "text-red-500";
-
   return (
     <div className="row-span-2 xl:row-span-2 col-span-1 md:col-span-1 xl:col-span-1 bg-white shadow-md rounded-2xl flex flex-col justify-between p-2">
       <div className="p-[8px]">

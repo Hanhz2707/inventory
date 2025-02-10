@@ -16,7 +16,6 @@ const mockData = [
 
 const CardSaleSummary = () => {
   const saleData = mockData;
-  const [timeFrame, setTimeFrame] = useState("weekly");
 
   const totalValueSum = saleData.reduce((acc, curr) => acc + curr.value, 0) || 0;
 
