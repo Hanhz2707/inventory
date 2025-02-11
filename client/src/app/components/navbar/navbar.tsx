@@ -1,5 +1,5 @@
 import React from "react";
-import { Bell, Menu, Moon, Settings, Sun } from "lucide-react";
+import { Bell, ChevronDown, Mail, Menu, Moon, Settings, Sun } from "lucide-react";
 import Link from "next/link";
 import { setIsDarkMode, setIsSidebarCollapsed } from "@/app/redux/state";
 import { useAppDispatch, useAppSelector } from "@/app/redux/types/types";
@@ -62,12 +62,21 @@ const Navbar = () => {
         </button>
 
         {/* Notification Bell */}
-        <div className="relative">
-          <Bell className="cursor-pointer text-gray-600" size={24} />
-          <span className="absolute -top-2 -right-2 inline-flex items-center justify-center h-5 w-5 text-xs font-bold text-white bg-red-500 rounded-full">
-            3
-          </span>
-        </div>
+        <div className="flex items-center space-x-6">
+      {/* Messages */}
+      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-800 transition-colors">
+        <Mail className="text-gray-600" size={20} />
+        <span className="text-sm font-medium text-gray-700">Message</span>
+        <ChevronDown className="text-gray-600" size={16} />
+      </div>
+
+      {/* Notifications */}
+      <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-800 transition-colors">
+        <Bell className="text-gray-600" size={20} />
+        <span className="text-sm font-medium text-gray-700">Notification</span>
+        <ChevronDown className="text-gray-600" size={16} />
+      </div>
+    </div>
 
         {/* Vertical Divider */}
         <div className="hidden md:block h-7 w-px bg-gray-300" />
