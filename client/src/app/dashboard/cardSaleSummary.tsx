@@ -13,9 +13,9 @@ import {
 
 const CardSaleSummary = () => {
   const { data, isLoading } = useGetDashboardQuery();
-
-  const saleData = data?.saleSummary || [];
   const [timeFrame, setTimeFrame] = useState("weekly");
+  
+  const saleData = data?.saleSummary || [];
 
   const totalValueSum =
     saleData.reduce((acc, curr) => acc + curr.totalValue, 0) || 0;

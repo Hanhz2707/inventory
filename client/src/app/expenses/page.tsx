@@ -264,9 +264,6 @@ const ExpensePage = () => {
               <th className="px-4 py-2 text-left text-sm font-medium text-gray-600">
                 Amount
               </th>
-              <th className="px-4 py-2 text-left text-sm font-medium text-gray-600">
-                Status
-              </th>
             </tr>
           </thead>
           <tbody>
