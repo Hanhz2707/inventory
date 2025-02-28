@@ -3,9 +3,19 @@ import { useGetDashboardQuery } from "../redux/state/api";
 import ProductRate from "../components/rating/rating";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import img1 from "/Code/Project/Thesis/client/public/images/images (1).jpg";
+import img2 from "/Code/Project/Thesis/client/public/images/images (2).jpg";
+import img3 from "/Code/Project/Thesis/client/public/images/images (3).jpg";
+import img4 from "/Code/Project/Thesis/client/public/images/images (4).jpg";
 
 const CardPopularProduct = () => {
   const { data, isLoading } = useGetDashboardQuery();
+
+  const imgArray = [img1, img2, img3, img4];
+
+  const getRandomImage = () => {
+    return imgArray[Math.floor(Math.random() * imgArray.length)];
+  };
 
   return (
     <div className="row-span-3 xl:row-span-3 md:col-span-2 xl:col-span-3 bg-white shadow-lg rounded-2xl pb-16 px-8 pt-6">
@@ -29,9 +39,10 @@ const CardPopularProduct = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
                     <Image
-                      src={`https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/product${
-                        Math.floor(Math.random() * 10) + 1
-                      }.jpg`}
+                      // src={`https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/product${
+                      //   Math.floor(Math.random() * 10) + 1
+                      // }.jpg`} AWS free tier expired
+                      src={getRandomImage()}
                       width={100}
                       height={100}
                       alt={product.name}
