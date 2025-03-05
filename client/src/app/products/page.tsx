@@ -9,10 +9,10 @@ import { SearchIcon } from "lucide-react";
 import { Rating } from "@mui/material";
 import CreateProductModal from "./createProductModal";
 import Image from "next/image";
-import img1 from "/Code/Project/Thesis/client/public/images/images (1).jpg";
-import img2 from "/Code/Project/Thesis/client/public/images/images (2).jpg";
-import img3 from "/Code/Project/Thesis/client/public/images/images (3).jpg";
-import img4 from "/Code/Project/Thesis/client/public/images/images (4).jpg";
+// import img1 from "/Code/Project/Thesis/client/public/images/images (1).jpg";
+// import img2 from "/Code/Project/Thesis/client/public/images/images (2).jpg";
+// import img3 from "/Code/Project/Thesis/client/public/images/images (3).jpg";
+// import img4 from "/Code/Project/Thesis/client/public/images/images (4).jpg";
 
 /**
  * Type for the ProductFormData
@@ -33,11 +33,11 @@ const Products = () => {
 
   const [createProduct] = useCreateProductMutation();
 
-  const imgArray = [img1, img2, img3, img4];
+  // const imgArray = [img1, img2, img3, img4];
 
-  const getRandomImage = () => {
-    return imgArray[Math.floor(Math.random() * imgArray.length)];
-  };
+  // const getRandomImage = () => {
+  //   return imgArray[Math.floor(Math.random() * imgArray.length)];
+  // };
 
 
   /**
@@ -89,10 +89,10 @@ const Products = () => {
             >
               <div className="w-full h-56 bg-cover bg-center justify-center items-center flex">
                 <Image
-                  // src={`https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/product${
-                  //   Math.floor(Math.random() * 10) + 1
-                  // }.jpg`} AWS free tier expired
-                  src={getRandomImage()}
+                  src={`https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/product${
+                    Math.floor(Math.random() * 10) + 1
+                  }.jpg`}
+                  // src={getRandomImage()}
                   width={200}
                   height={200}
                   alt={product.name}
