@@ -35,7 +35,7 @@ const Navbar = () => {
           <Menu className="w-5 h-5 text-gray-600" />
         </button>
 
-        <div className="relative w-full max-w-xs">
+        <div className="relative w-full max-w-xs hidden sm:block">
           <input
             type="search"
             placeholder="Search..."
@@ -62,20 +62,25 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Notification Bell */}
-        <div className="flex items-center space-x-6">
+      {/* Notification Bell */}
+      <div className="flex items-center space-x-6">
       {/* Messages */}
       <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-800 transition-colors">
         <Mail className="text-gray-600" size={20} />
-        <span className="text-sm font-medium text-gray-700">Message</span>
-        <ChevronDown className="text-gray-600" size={16} />
+        <div className="hidden sm:flex items-center">
+          <span className="text-sm font-medium text-gray-700">Message</span>
+          <ChevronDown className="text-gray-600" size={16} />
+        </div>
+
       </div>
 
       {/* Notifications */}
       <div className="flex items-center space-x-1 cursor-pointer hover:text-gray-800 transition-colors">
         <Bell className="text-gray-600" size={20} />
-        <span className="text-sm font-medium text-gray-700">Notification</span>
+        <div className="hidden sm:flex items-center">
+        <span className="text-sm font-medium text-gray-700">Message</span>
         <ChevronDown className="text-gray-600" size={16} />
+      </div>
       </div>
     </div>
 
