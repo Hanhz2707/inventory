@@ -82,7 +82,7 @@ const UserSettingsPage = () => {
         <h2 className="text-xl font-semibold mb-4">Profile</h2>
         <div className="flex items-center gap-4 mb-4">
           <img
-            src={userData.profile.avatar}
+            src={"https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/avatar.png"}
             alt="Avatar"
             className="w-16 h-16 rounded-full"
           />

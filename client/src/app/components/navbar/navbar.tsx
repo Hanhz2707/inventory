@@ -4,7 +4,7 @@ import Link from "next/link";
 import { setIsDarkMode, setIsSidebarCollapsed } from "@/app/redux/state";
 import { useAppDispatch, useAppSelector } from "@/app/redux/types/types";
 import Image from "next/image";
-import avatar from "C:/Users/ADMIN/Downloads/avatar.png";
+// import avatar from "C:/Users/ADMIN/Downloads/avatar.png";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
@@ -90,7 +90,7 @@ const Navbar = () => {
         {/* Profile Section */}
         <div className="hidden md:flex items-center gap-3">
           <Image
-            src={avatar}
+            src={"https://s3-inventoryhuyanhpham.s3.eu-north-1.amazonaws.com/avatar.png"}
             width={40}
             height={40}
             className="rounded-full"
