@@ -125,7 +125,37 @@ npm run dev
 - The provided seed script in this README references `prisma/seedData.ts` and the built artifact `dist/prisma/seedData.js`, which align with files present in the repo. If you add or rename seed scripts, update the commands accordingly.
 - Default ports: client 3000, server 3001 (configurable).
 
-## Contribution
+## Contributions
+Note: "Contribution(s)" here summarizes work that has been done; "Contributing" (section below) explains how others can help.
+
+### Summary (highlights)
+- [TBD] Set up project structure and tooling (e.g., Next.js 14, Tailwind, Express, Prisma)
+- [TBD] Implemented Dashboard KPIs and charts
+- [TBD] Designed Prisma schema for users/products/sales/purchases/expenses
+- [TBD] Built Products endpoints (GET/POST) and client integration
+- [TBD] Seeded demo data and documented setup
+- [TBD] Any other major fixes/features
+
+### Detailed entries
+| Area        | Description                                   | Date         | Link (optional) |
+|-------------|-----------------------------------------------|--------------|-----------------|
+| Dashboard   | KPI cards and charts                          | [YYYY-MM-DD] |                 |
+| Server API  | Products endpoints (GET/POST)                 | [YYYY-MM-DD] |                 |
+| Database    | Prisma schema for core entities               | [YYYY-MM-DD] |                 |
+| Client      | Products list/search/create flows             | [YYYY-MM-DD] |                 |
+| DevEx       | Seed data and documentation improvements      | [YYYY-MM-DD] |                 |
+
+### Metrics (approximate)
+- Commits authored: [TBD]
+- Issues opened/resolved: [TBD]
+- PRs merged: [TBD]
+- Lines added/removed: [TBD]
+- First commit date: [TBD]
+- Latest contribution date: [TBD]
+
+Last updated: 2026-01-19
+
+## Contributing
 We welcome contributions of all kinds — bug reports, feature requests, documentation improvements, and code changes.
 
 ### How to contribute
