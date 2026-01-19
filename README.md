@@ -125,6 +125,49 @@ npm run dev
 - The provided seed script in this README references `prisma/seedData.ts` and the built artifact `dist/prisma/seedData.js`, which align with files present in the repo. If you add or rename seed scripts, update the commands accordingly.
 - Default ports: client 3000, server 3001 (configurable).
 
+## Contributing
+We welcome contributions of all kinds — bug reports, feature requests, documentation improvements, and code changes.
+
+### How to contribute
+1) Fork the repository to your account
+2) Create a feature branch from `main`
+```
+# from repository root
+git checkout -b feat/short-description
+```
+3) Make your changes in small, logically separated commits
+4) Run and verify both workspaces locally (see Getting Started)
+5) Push your branch and open a Pull Request (PR) to `main`
+
+### Guidelines
+- Code style
+  - Follow the existing code style and file structure in both `client` and `server`.
+  - Use TypeScript types where possible; keep API models in sync between client and server.
+  - Prefer small, focused PRs that are easy to review.
+- Commit messages
+  - Use Conventional Commits where practical: `feat: ...`, `fix: ...`, `docs: ...`, `refactor: ...`, `chore: ...`.
+- Branch naming
+  - Suggested prefixes: `feat/`, `fix/`, `docs/`, `chore/`, `refactor/`.
+- Tests & checks (if applicable)
+  - Ensure the app builds and runs:
+    - `cd server && npm run build` then `npm start`
+    - `cd ../client && npm run build` then `npm start` or `npm run dev`
+  - If you touch the Prisma schema or seed data, verify `npx prisma migrate deploy` and the seed script run without errors.
+- PR checklist
+  - The PR description explains the problem and the solution.
+  - Screenshots/GIFs for UI changes are included when relevant.
+  - No unrelated file changes or reformatting noise.
+
+### Reporting issues
+- Use GitHub Issues with:
+  - Clear title and description
+  - Steps to reproduce (if a bug)
+  - Expected vs actual behavior
+  - Environment details (OS, Node version, database)
+
+### Security
+- Please avoid disclosing security issues in public issues. Report them privately if possible.
+
 ---
 
-Maintained on: 2025-12-21
+Maintained on: 2026-01-19
