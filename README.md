@@ -125,7 +125,7 @@ npm run dev
 - The provided seed script in this README references `prisma/seedData.ts` and the built artifact `dist/prisma/seedData.js`, which align with files present in the repo. If you add or rename seed scripts, update the commands accordingly.
 - Default ports: client 3000, server 3001 (configurable).
 
-## Contributing
+## Contribution
 We welcome contributions of all kinds — bug reports, feature requests, documentation improvements, and code changes.
 
 ### How to contribute
